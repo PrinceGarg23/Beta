@@ -1,0 +1,25 @@
+body,html{
+    background: #1a1a1a;
+    background-color: #1a1a1a ;
+    color: silver !important;
+    font-size: 18px;
+    font-family: "inconsolataregular" !important;
+}
+
+
+#loader {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	z-index: 999;
+	overflow: visible;
+	background-color: #1a1a1a;
+	padding-top: 40vh;
+}
+
+.gif {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+}
