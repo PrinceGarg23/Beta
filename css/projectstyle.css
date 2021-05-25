@@ -1,10 +1,12 @@
-html{
-    background-color: #1a1a1a;
+html,body{
+    background-color: #171717;
+    font-family: "inconsolataregular" !important;
 }
 
 .header h1{
     display: block;
     justify-content: unset;
+    margin-top: 30px;
     color: silver;
 }
 
@@ -15,7 +17,7 @@ html{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 6vh 0;
+    margin:  0;
     background: #1a1a1a;
 }
 
@@ -51,7 +53,7 @@ html{
 .container-fluid .card .contentBx h3 { 
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight:bolder;
     font-size: 20px;
     text-align: center;
     margin: 40px 0 10px;
@@ -76,20 +78,21 @@ html{
     -moz-transition: all .5s ease;
     transition: all .5s ease;
     opacity: 0;
+    transform: translateY(25px);
     border-radius: 15px;
 }
 
 .card:hover .hover-state{
     opacity: 1;
+    transform: translateY(0px);
 }
-/*.contentBx:hover {
-    width: 40%;
-}
-*/
+
 .hover-state h1 {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 24px;
+    transition: all .5s ease;
+    transform: translateY(100px);
 }
 
 .text-white {
@@ -99,5 +102,26 @@ html{
 .hover-state p {
     margin-bottom: 24px;
     color: black;
+    transition: all .75s ease;
+    transform: translateY(100px);
 }
+
+.hover-state .btn{
+    transition: all 1s ease;
+    transform: translateY(100px);
+}
+
+.card:hover .hover-state h1{
+    transform: translateY(0px);
+}
+.card:hover .hover-state p{
+    transform: translateY(0px);
+}
+
+.card:hover .hover-state .btn{
+    transform: translateY(0px);
+}
+
+
+
 

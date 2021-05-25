@@ -5,14 +5,26 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/projectstyle.css">
+    <link rel="stylesheet" href="css\projectstyle.css">
+    <link rel="stylesheet" href="css\navstyle.css">
+    <link rel="stylesheet" href="webfontkit-20210518-032853\stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
 
+    <div id="loader">
+        <img src="Assets\common\1493.gif" class="gif">
+    </div>
 
-        <!--Projects Page Starting-->
+    <div class="icon-bar">
+        <a href="index.html"><img src="Assets\common\home.png" class="icon">HOME</a> 
+        <a href="projects.html" class="active"><img src="Assets\common\projects.svg" class="icon">PROJECTS</a>
+        <a href="#"><img src="Assets\common\contact-us.png" class="icon">CONTACTS</a> 
+      </div>
+
+
         <div class="container-fluid">
 
     <div class="header" style="background-color: #1a1a1a;">
@@ -25,7 +37,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="imgBx">
-                    <img src="Assets/projects/wireframe.svg" class="projectimg">
+                    <img src="Assets\projects\wireframe.svg" class="projectimg">
                 </div>
                 <div class="contentBx">
                     <h3>FrameWork Essentials</h3>
@@ -40,7 +52,7 @@
             </div>
             <div class="card">
                 <div class="imgBx">
-                    <img src="Assets/projects/golos_blockchain.svg" class="projectimg">
+                    <img src="Assets\projects\golos_blockchain.svg" class="projectimg">
                 </div>
                 <div class="contentBx">
                     <h3>Golos BlockChain</h3>
@@ -55,7 +67,7 @@
             </div>
             <div class="card">
                 <div class="imgBx">
-                    <img src="Assets/projects/vr-glasses.svg" class="projectimg">
+                    <img src="Assets\projects\vr-glasses.svg" class="projectimg">
                 </div>
                 <div class="contentBx">
                     <h3>VR Streaming</h3>
@@ -70,7 +82,7 @@
             </div>
             <div class="card">
                 <div class="imgBx" style="height: 250px; width: 250px;">
-                    <img src="Assets/projects/cryptocurrency.svg" class="projectimg">
+                    <img src="Assets\projects\cryptocurrency.svg" class="projectimg">
                 </div>
                 <div class="contentBx">
                     <h3>Crypto Essentials</h3>
@@ -84,7 +96,19 @@
                 </div>
             </div>
             <div class="card">
-                <h1>Coming Soon!</h1>
+                <div class="imgBx" style="height: 250px; width: 250px;">
+                    <img src="Assets\projects\mobile.svg" class="projectimg">
+                </div>
+                <div class="contentBx">
+                    <h3>Celeb.me</h3>
+                </div>
+                <div class="hover-state">
+                    <div class="align-vertical">
+                        <h1 class="text-white"><strong>Project 5</strong></h1>
+                        <p class="text-white">This is my project.</p>
+                        <a href="#" class="btn btn-white btn-primary">See Project</a>
+                    </div>
+                </div>
             </div>
             <div class="card">
                 <h1>Coming Soon!</h1>
@@ -92,6 +116,32 @@
         </div>
     </div>
     </div>
+
+    <script>
+        var loader;
+
+        function loadNow(opacity) {
+            if (opacity <= 0) {
+                displayContent();
+            } else {
+                loader.style.opacity = opacity;
+                window.setTimeout(function () {
+                    loadNow(opacity - 0.1);
+                }, 50);
+            }
+        }
+
+        function displayContent() {
+            loader.style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            loader = document.getElementById("loader");
+            loadNow(3);
+        });
+    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
