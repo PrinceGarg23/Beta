@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Prince Garg || Contact Me</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css\contact.css">
+    <link rel="stylesheet" href="css\preloader.css">
+    <link rel="stylesheet" href="css\navstyle.css">
+    <link rel="stylesheet" href="webfontkit-20210518-032853\stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div id="loader">
+        <img src="Assets\common\1493.gif" class="gif">
+    </div>
+
+    <div class="icon-bar">
+        <a href="index.html"><img src="Assets\common\home.png" class="icon">HOME</a> 
+        <a href="projects.html"><img src="Assets\common\projects.svg" class="icon">PROJECTS</a>
+        <a href="contacts.html" class="active"><img src="Assets\common\contact-us.png" class="icon">CONTACTS</a>
+    </div>
+    <div class="container-fluid">
+        <div class="card contact-form">
+            <form action="https://formspree.io/f/xwkaoeay" method="POST">
+                <input class="form-info" type="text" id="name" name="name" placeholder="Name" required><br>
+                <input class="form-info" type="email" id="email" name="_replyto" placeholder="Email" required><br>
+                <input class="form-info" type="tel" id="phone" name="phone" placeholder="Phone" pattern="[0-9]{10}" required> <br>
+                <textarea id="message" name="message" placeholder="I'd love to reply!!"></textarea><br>
+                <button class="send-button" type="submit" value="Send" id="send"> Send <i class="fa fa-paper-plane" aria-hidden="true"></i> </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var loader;
+
+        function loadNow(opacity) {
+            if (opacity <= 0) {
+                displayContent();
+            } else {
+                loader.style.opacity = opacity;
+                window.setTimeout(function () {
+                    loadNow(opacity - 0.1);
+                }, 50);
+            }
+        }
+
+        function displayContent() {
+            loader.style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            loader = document.getElementById("loader");
+            loadNow(3);
+        });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
